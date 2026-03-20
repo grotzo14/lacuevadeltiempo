@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 21</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">21</span>
+      <span class="page-era">La Cueva del Tiempo</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag21-img.jpg"
+       style="display:none">
+    <img src="pag21-img.jpg" alt="Ilustración página 21"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Das la vuelta y sales de la cueva. A estas horas, ya debería estar amaneciendo. Sin embargo, no logras ver ni rastro de luz y tienes que buscar a tientas tu camino hasta la entrada. Tanteas las paredes tratando de encontrar alguna abertura. Tus manos tocan algo húmedo, frío y duro: ¡hielo! La entrada está totalmente cubierta y los bloques de hielo llegan hasta el interior de la cueva.</p>
+<p>Retrocedes, totalmente confuso y desalentado. Desearías estar soñando. Vuelves sobre tus pasos intentando pensar con claridad. Sabes que la única posibilidad de salir de la cueva es seguir uno de los pasadizos que tienes delante.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag33.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Sigues el de la derecha</span>
+        <span class="option-page">pág. 33</span>
+      </a>
+      <a class="option" href="pag35.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Sigues el de la izquierda</span>
+        <span class="option-page">pág. 35</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag20.html">← Pág. 20</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag22.html">Pág. 22 →</a>
+  </footer>
+  </article>
+</body>
+</html>

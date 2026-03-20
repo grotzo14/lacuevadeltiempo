@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 40</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">40</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag40-img.jpg"
+       style="display:none">
+    <img src="pag40-img.jpg" alt="Ilustración página 40"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Te acercas cautelosamente a la nave espacial y descubres con gran sorpresa que se sostiene a unos treinta centímetros del suelo sin ningún apoyo visible. No tiene motores, tubos de escape, escotillas, tren de aterrizaje, antenas, ni ninguno de los aparatos que se supone que debe llevar una nave espacial. Piensas que debe ser obra de una civilización extremadamente avanzada.</p>
+<p>Con la esperanza de que sus gentes hayan desarrollado el sentimiento de amistad hacia los otros seres, te aproximas a la nave. En ese momento se abre una puerta, pero lo único que logras ver de su interior es una fuerte luz azulada. A través de la abertura aparece un enorme cubo y unas pinzas mecánicas lo depositan en el suelo. La tapa del cubo se levanta, dejando a la vista una especie de lecho donde descansan las figuras dormidas de tres hombres y tres mujeres vestidos con trozos de pieles de animales. Te recuerdan a los dibujos que representan a los primeros habitantes de la tierra. Sientes el impulso de saltar a la nave antes de que se cierre la puerta.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag115.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Saltas a la nave</span>
+        <span class="option-page">pág. 115</span>
+      </a>
+      <a class="option" href="pag83.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">En caso contrario, no subes</span>
+        <span class="option-page">pág. 83</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag39.html">← Pág. 39</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag41.html">Pág. 41 →</a>
+  </footer>
+  </article>
+</body>
+</html>

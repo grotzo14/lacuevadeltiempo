@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 33</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">33</span>
+      <span class="page-era">Titanic — 1912</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag33-img.jpg"
+       style="display:none">
+    <img src="pag33-img.jpg" alt="Ilustración página 33"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Tratas de avanzar en medio de la débil luz. Delante de ti encuentras una escalera de cuerda. Te agarras a ella y empiezas a subir. De pronto, oyes un temible crujido y la escalera empieza a vibrar. Te paras, fuertemente agarrado, mientras el ruido se apaga. Sigues subiendo y, al cabo de un rato, notas el aire frío y cortante de la noche. A tu alrededor brillan gran cantidad de luces. Delante hay un gran bloque de hielo. Notas una extraña sacudida, como si la tierra se moviese. Al tocar el suelo descubres que es de madera. Puedes ver el mar más allá de una barandilla. El cielo está cuajado de estrellas que brillan con fulgor inusitado. Te das cuenta de que te encuentras en la cubierta de un barco de gran tamaño.</p>
+<p>Colgado cerca de ti hay un enorme salvavidas que en letras negras reza TITANIC. Sabes que sólo ha existido un barco con ese nombre. En su primer y único viaje chocó con un gigantesco iceberg, hundiéndose en el Atlántico en menos de tres horas.</p>
+<p>Al avanzar por la cubierta del Titanic descubres que por debajo de la línea de flotación el agua entra a raudales en los compartimentos interiores.</p>
+      </div>
+
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag32.html">← Pág. 32</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag34.html">Pág. 34 →</a>
+  </footer>
+  </article>
+</body>
+</html>

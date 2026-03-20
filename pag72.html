@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 72</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">72</span>
+      <span class="page-era">Presente</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag72-img.jpg"
+       style="display:none">
+    <img src="pag72-img.jpg" alt="Ilustración página 72"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Delante de tus tíos y de algunos obreros del rancho golpeas cuidadosamente el huevo con un hacha, esperando que se abra, sin que se rompa en pedazos.</p>
+<p class="dialog">— ¡Alto, un momento! — dice tu tío Howard —. Me siento inclinado a pensar que dices la verdad y creo que será mejor que primero lo vea un científico de la universidad.</p>
+<p>Te alegra saber que tu tío piensa de este modo, porque te asusta la responsabilidad de romper un huevo tan extraño, matando posiblemente a un raro monstruo antes de nacer.</p>
+<p>Tu tío llama a un famoso profesor de paleontología que consiente en venir el próximo sábado. Pones el huevo en un cuenco grande encima de la mesa del comedor.</p>
+      </div>
+
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag71.html">← Pág. 71</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag73.html">Pág. 73 →</a>
+  </footer>
+  </article>
+</body>
+</html>

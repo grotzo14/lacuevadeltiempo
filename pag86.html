@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 86</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">86</span>
+      <span class="page-era">Londres — 1940</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag86-img.jpg"
+       style="display:none">
+    <img src="pag86-img.jpg" alt="Ilustración página 86"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Andas y andas con la esperanza de que el pasadizo te conduzca a tu época. Al cabo de un buen rato, llegas a un túnel que desemboca en un aposento húmedo y oscuro que parece ser el sótano de una casa. Hay mucha gente agrupada, sentada sobre mantas en la más completa oscuridad a excepción de la vacilante luz de unas velas. Oyes el lúgubre aullido de unas sirenas. En el centro de la habitación, sobre una mesa, una anticuada radio emite una mezcla de música clásica e interferencias. Las sirenas se apagan, el suelo tiembla y oyes una explosión cercana. Después otra más lejos y, por fin, una tan cerca que una pared y la mitad del techo se vienen abajo, formando un montón de escombros que bloquean la entrada del túnel. Todos corréis hacia el lado opuesto, tosiendo y respirando con dificultad a causa del polvo que llena la habitación.</p>
+<p>Vas a empezar una nueva vida. Corre el año 1940 y estás en Londres.</p>
+      </div>
+
+
+  <div class="page-end fin-amb">
+    <div class="page-end-label">Final</div>
+    <div class="page-end-text">Vives el Blitz de Londres en 1940. Una nueva vida en la Segunda Guerra Mundial.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag85.html">← Pág. 85</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag87.html">Pág. 87 →</a>
+  </footer>
+  </article>
+</body>
+</html>

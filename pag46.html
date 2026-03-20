@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 46</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">46</span>
+      <span class="page-era">Prehistoria</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag46-img.jpg"
+       style="display:none">
+    <img src="pag46-img.jpg" alt="Ilustración página 46"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Bien abrigado con tus toscas botas y abrigo de pieles, sales poco después de amanecer con los demás, un andrajoso grupo formado por una treintena de hombres, mujeres y chiquillos. Afortunadamente no hay ningún niño pequeño ya que no lograría sobrevivir al duro viaje. El sol asoma tímidamente entre las nubes, el viento es moderado y avanzáis con rapidez en vuestra larga ruta hacia el sur.</p>
+<p>Al cabo de unos cuantos días de viaje, casi todos están al borde del agotamiento. Los cazadores no han conseguido encontrar ninguna presa. No es posible encender un fuego por las noches y la única forma de no quedarse helados es dormir agrupados.</p>
+<p>Sin embargo, una semana después notas que el sol brilla con más calor a mediodía y que la nieve ya no es tan espesa. Parece que después de todo lograréis sobrevivir, aunque debes abandonar toda esperanza de volver a tu propia época.</p>
+      </div>
+
+
+  <div class="page-end fin-amb">
+    <div class="page-end-label">Final</div>
+    <div class="page-end-text">Sobrevives emigrando al sur con los prehistóricos. Nunca volverás a tu época.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag45.html">← Pág. 45</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag47.html">Pág. 47 →</a>
+  </footer>
+  </article>
+</body>
+</html>

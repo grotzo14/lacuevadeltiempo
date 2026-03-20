@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 92</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">92</span>
+      <span class="page-era">Año 3742</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag92-img.jpg"
+       style="display:none">
+    <img src="pag92-img.jpg" alt="Ilustración página 92"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Andas un buen trecho antes de cruzarte con otro túnel. Este conduce directamente a la superficie. Te encuentras con un panorama sorprendente.</p>
+<p>El mundo se ha transformado en un hermoso parque de suave hierba y grandes árboles. Aquí y allá hay grupos de edificios multicolores, rematados en cúpula, unidos por rampas, terrazas y paseos cubiertos. Se te acercan unas personas, vestidas sencillamente con pantalones y camisas de color verde y zapatos marrones. No logras entender su idioma, ni tampoco ellos el tuyo. Se parecen mucho a la gente de tu época, pero son más delgados y musculosos y su aspecto es desusadamente saludable. También son bastante más bajos.</p>
+<p>Te conducen dentro de uno de los edificios y te enseñan un equipo electrónico que tiene la apariencia de una computadora. Al ver una máquina de escribir, te sientas y tecleas un mensaje.</p>
+<p>La computadora imprime una respuesta. Al parecer, tiene acceso a algún banco de memoria donde figura tu idioma. Al poco rato averiguas que estás en el año 3742.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag56.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Entras en el mundo del año 3742</span>
+        <span class="option-page">pág. 56</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag91.html">← Pág. 91</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag93.html">Pág. 93 →</a>
+  </footer>
+  </article>
+</body>
+</html>

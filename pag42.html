@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 42</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">42</span>
+      
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag42-img.jpg"
+       style="display:none">
+    <img src="pag42-img.jpg" alt="Ilustración página 42"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p><em>[Ilustración: El anciano en su sala]</em></p>
+      </div>
+
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag41.html">← Pág. 41</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag43.html">Pág. 43 →</a>
+  </footer>
+  </article>
+</body>
+</html>

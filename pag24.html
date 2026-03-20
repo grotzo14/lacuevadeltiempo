@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 24</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">24</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag24-img.jpg"
+       style="display:none">
+    <img src="pag24-img.jpg" alt="Ilustración página 24"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Sigues el pasaje de la izquierda. Subes por la pendiente hasta la superficie. Delante de ti se extiende una verde pradera hasta un riachuelo claro, de rápidas aguas y, al otro lado, laderas cubiertas de pinos que se pierden en la distancia hasta unos picos blanqueados por la nieve. Podrías estar en Wyoming en tu propia época. De todos modos, la época a la que has llegado parece bastante tranquila.</p>
+<p>Hay una manada de búfalos paciendo, pero no logras distinguir ninguna casa, valla o carretera, es decir, ningún signo de presencia humana. Puede ser que te encuentres a cientos, quizá miles, de años de tu época.</p>
+<p>Miras hacia arriba. Una de las hinchadas nubes que pueblan el cielo se mueve de una forma muy extraña. ¡Está bajando! Con tus propios ojos presencias el aterrizaje de una nave espacial a sólo unos metros de distancia.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag38.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Te escondes para no ser visto</span>
+        <span class="option-page">pág. 38</span>
+      </a>
+      <a class="option" href="pag40.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Te diriges a la nave espacial</span>
+        <span class="option-page">pág. 40</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag23.html">← Pág. 23</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag25.html">Pág. 25 →</a>
+  </footer>
+  </article>
+</body>
+</html>

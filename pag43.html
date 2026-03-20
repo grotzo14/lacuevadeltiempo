@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 43</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">43</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag43-img.jpg"
+       style="display:none">
+    <img src="pag43-img.jpg" alt="Ilustración página 43"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p class="dialog">— ¿Por qué quieres volver con tu familia y tus amigos? —pregunta el anciano.</p>
+<p class="dialog">— Porque los echo mucho de menos y no podría soportar no volver a verlos. Además, ellos también deben sentirse tristes sin mí.</p>
+<p class="dialog">— Piensas en los demás, aparte de en ti mismo —responde—. Esa es una buena razón para volver a tu época. Toma el primer túnel de la derecha y encontrarás la salida. Al parecer, has decidido vivir en una sola época, ¿no es así?</p>
+<p class="dialog">— Sí —respondes.</p>
+<p class="dialog">— Entonces, vívela con el máximo provecho —dice el anciano despidiéndote con la mano.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Vuelves a tu época. Decides vivir plenamente cada momento de ella.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag42.html">← Pág. 42</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag44.html">Pág. 44 →</a>
+  </footer>
+  </article>
+</body>
+</html>

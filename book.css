@@ -1,0 +1,291 @@
+/* ============================================================
+   LA CUEVA DEL TIEMPO — book.css
+   Neutral moderno · sans-serif · gris suave
+   ============================================================ */
+
+/* --- Reset & Base ----------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #f4f3f0;
+  --bg-page:     #ffffff;
+  --border:      #dddbd5;
+  --text:        #2c2c2a;
+  --text-muted:  #6b6a65;
+  --text-dim:    #9e9d98;
+  --accent:      #3d5a80;       /* azul sobrio para links y detalles */
+  --accent-h:    #2b3f5c;
+  --opt-bg:      #f0eff8;       /* fondo suave para bloque de opciones */
+  --opt-border:  #c5c2e0;
+  --end-bg:      #fdf3e7;       /* fondo para bloque FIN */
+  --end-border:  #e8c98a;
+  --end-text:    #7a4f10;
+  --img-bg:      #eceae4;       /* placeholder imagen */
+  --img-border:  #d2cfc8;
+  --page-num-size: 13px;
+  --font: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Courier New', monospace;
+  --radius: 6px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --max-w: 620px;
+}
+
+html { background: var(--bg); font-size: 16px; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px 64px;
+}
+
+/* --- Page card -------------------------------------------- */
+.page-card {
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: var(--max-w);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- Page number bar -------------------------------------- */
+.page-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 24px 10px;
+  border-bottom: 1px solid var(--border);
+  min-height: 44px;
+  position: relative;
+}
+
+/* Even pages: number on LEFT */
+.page-card.even .page-header { justify-content: flex-start; }
+.page-card.even .page-number  { margin-right: auto; }
+
+/* Odd pages: number on RIGHT */
+.page-card.odd  .page-header { justify-content: flex-end; }
+.page-card.odd  .page-number  { margin-left: auto; }
+
+.page-number {
+  font-size: var(--page-num-size);
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* Optional chapter/era badge in the header center */
+.page-era {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+/* --- Image area ------------------------------------------- */
+.page-image {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: var(--img-bg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  max-height: 320px;
+}
+
+.page-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder shown when no image file yet */
+.page-image.placeholder {
+  flex-direction: column;
+  gap: 8px;
+  border: 2px dashed var(--img-border);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.page-image.placeholder::before {
+  content: '[ ilustración ]';
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* --- Body area -------------------------------------------- */
+.page-body {
+  padding: 28px 32px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* --- Text block ------------------------------------------- */
+.page-text {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.page-text p + p { margin-top: 1em; }
+
+/* Dialog lines */
+.page-text .dialog {
+  margin: 0.5em 0 0.5em 1.2em;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* --- Options block ---------------------------------------- */
+.page-options {
+  background: var(--opt-bg);
+  border: 1px solid var(--opt-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.page-options-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid var(--opt-border);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.15s;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.option:first-of-type { border-top: none; }
+
+.option:hover { background: rgba(61,90,128,0.06); }
+
+.option-arrow {
+  color: var(--accent);
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.option-text { flex: 1; }
+
+.option-page {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+  background: rgba(61,90,128,0.10);
+  border-radius: 4px;
+  padding: 1px 7px;
+  flex-shrink: 0;
+}
+
+/* --- FIN block -------------------------------------------- */
+.page-end {
+  background: var(--end-bg);
+  border: 1px solid var(--end-border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.page-end-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--end-text);
+}
+
+.page-end-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--end-text);
+  font-style: italic;
+}
+
+/* FIN variants */
+.page-end.fin-ok    { --end-bg: #edf7ed; --end-border: #9fd89f; --end-text: #2a5a2a; }
+.page-end.fin-dark  { --end-bg: #fceaea; --end-border: #e89898; --end-text: #6b1a1a; }
+.page-end.fin-amb   { --end-bg: #fdf3e7; --end-border: #e8c98a; --end-text: #7a4f10; }
+
+/* --- Navigation footer ------------------------------------ */
+.page-nav {
+  border-top: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 5px 12px;
+  border: 1px solid var(--opt-border);
+  border-radius: 20px;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.nav-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.nav-btn.home {
+  color: var(--text-muted);
+  border-color: var(--border);
+  font-size: 11px;
+}
+
+.nav-btn.home:hover { background: var(--text); color: #fff; border-color: var(--text); }
+
+/* --- Responsive ------------------------------------------- */
+@media (max-width: 480px) {
+  body { padding: 0 0 40px; }
+  .page-card { border-radius: 0; border-left: none; border-right: none; }
+  .page-body { padding: 20px 18px 20px; }
+}

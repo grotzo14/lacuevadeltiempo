@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 44</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">44</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag44-img.jpg"
+       style="display:none">
+    <img src="pag44-img.jpg" alt="Ilustración página 44"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p class="dialog">— ¡Ah, eres muy astuto! —dice el anciano—. No te conformas con una sola posibilidad. Bien, te llevaré a otra época y, si no te gusta, me llamas y te devolveré a la tuya, siempre que nos dé tiempo. Toma el túnel de la derecha.</p>
+<p>Sigues sus indicaciones y, a través del túnel, llegas a la calle de una ciudad. Inmediatamente te das cuenta que está en guerra. A tu alrededor estallan las bombas y los cohetes. Llamas a gritos al anciano para que te haga volver a la cueva, pero ya no dispones de tiempo.</p>
+      </div>
+
+
+  <div class="page-end fin-dark">
+    <div class="page-end-label">Final fatal</div>
+    <div class="page-end-text">Quedas atrapado en una ciudad en guerra. No hubo tiempo de volver.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag43.html">← Pág. 43</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag45.html">Pág. 45 →</a>
+  </footer>
+  </article>
+</body>
+</html>

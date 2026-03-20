@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 30</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">30</span>
+      <span class="page-era">Edad del Hielo</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag30-img.jpg"
+       style="display:none">
+    <img src="pag30-img.jpg" alt="Ilustración página 30"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Cabalgar sobre un mamut podría ser muy divertido si no estuvieses hambriento, helado y perdido. Además, ¿a dónde te llevaría? Sigues andando, desanimado y triste. Estás a punto de sentarte y ponerte a llorar cuando te metes por él a gatas esperando encontrar refugio o un camino hacia la Cueva del Tiempo.</p>
+<p>Desembocas en un túnel cruzado por otros de distintas direcciones. Ahora estás seguro de haber vuelto a la Cueva del Tiempo. Sientes el impulso de seguir el primer túnel que salga a la superficie, pero si quieres volver a tu época tienes que avanzar considerablemente en el tiempo, por lo que piensas que quizá sería conveniente esperar y seguir otro túnel.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag54.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Escoges el primer túnel</span>
+        <span class="option-page">pág. 54</span>
+      </a>
+      <a class="option" href="pag92.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Sigues alguno de los otros túneles</span>
+        <span class="option-page">pág. 92</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag29.html">← Pág. 29</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag31.html">Pág. 31 →</a>
+  </footer>
+  </article>
+</body>
+</html>

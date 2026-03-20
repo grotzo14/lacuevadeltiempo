@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 93</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">93</span>
+      <span class="page-era">La Cueva del Tiempo</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag93-img.jpg"
+       style="display:none">
+    <img src="pag93-img.jpg" alt="Ilustración página 93"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Desciendes de nuevo por el túnel con la esperanza de poder volver a una época anterior. Recibes con agrado el aire frío y húmedo que sube desde la cueva. Sientes curiosidad por saber si siguiendo el primer túnel podrías contemplar el estado del mundo antes de ser consumido por el calor del sol en extinción o si, por el contrario, descubrirías qué sucedió después. Supones, sin embargo, que un túnel más lejano tendrá más posibilidades de devolverte a tu época.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag31.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Sigues el primer túnel</span>
+        <span class="option-page">pág. 31</span>
+      </a>
+      <a class="option" href="pag32.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Sigues un túnel más lejano</span>
+        <span class="option-page">pág. 32</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag92.html">← Pág. 92</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag94.html">Pág. 94 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 85</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">85</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag85-img.jpg"
+       style="display:none">
+    <img src="pag85-img.jpg" alt="Ilustración página 85"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Los hombres primitivos miran a su alrededor con curiosidad. No parecen notar tu presencia. Se incorporan y echan a andar. Uno de ellos bebe del arroyo. Emiten curiosos gruñidos y chasquidos, aunque no parece que realmente estén hablando entre ellos. El más alto del grupo coge un palo y empieza a buscar raíces por la orilla del río. Mordisquea todas las que encuentra y, finalmente, sonriendo pasa una a los otros. Una de las mujeres aplaude. Todos empiezan a buscar palos. Un hombre te alcanza un trozo de raíz. La pruebas y encuentras que su sabor es parecido al de la zanahoria. Las mujeres te sonríen. Te han aceptado como miembro del grupo.</p>
+<p>A la mañana siguiente, te despiertas sobre el suave musgo de la Caverna de la Serpiente, a unos cuantos metros de la entrada de la Cueva, preguntándote si todo lo sucedido es realidad o forma parte de un sueño. De todos modos, no sientes ningún deseo de volver a entrar en la Cueva del Tiempo para comprobarlo.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">¿Sueño o realidad? Despiertas en la Caverna de la Serpiente sin deseos de comprobarlo.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag84.html">← Pág. 84</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag86.html">Pág. 86 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 80</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">80</span>
+      <span class="page-era">Futuro lejano — 4 billones de años</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag80-img.jpg"
+       style="display:none">
+    <img src="pag80-img.jpg" alt="Ilustración página 80"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p class="dialog">— Ya que no logras encontrar tu época, quizá podamos volver a la mía — dices.</p>
+<p>Andáis de vuelta un corto trecho hasta que os encontráis con un túnel más ancho que los otros. Te paras y Luisa te mira interrogativamente.</p>
+<p class="dialog">— Probemos con éste — dices.</p>
+<p>Después de andar casi una hora, ambos sonreís con alegría al ver luz. Al poco rato salís del túnel a un terreno arenoso de color rojizo que se extiende en forma de cuenco. El aire es fresco y claro, como el de un día de otoño. Te imaginas que puede tratarse del cráter de un volcán extinguido. De pronto, oís un fuerte estruendo detrás de vosotros y tenéis que escapar corriendo de un desprendimiento de tierra que cierra el túnel de la Cueva del Tiempo.</p>
+<p class="dialog">— ¿En qué año estaremos? — pregunta Luisa cuando lográis recuperaros.</p>
+<p>Por primera vez miras hacia el cielo. El sol es cuatro veces mayor del tamaño habitual, pero mucho menos brillante. Aunque está casi encima de vuestras cabezas tiene un color rojo óxido.</p>
+<p class="dialog">— No lo sé — respondes —, pero por lo que he leído de astronomía, supongo que debe hacer unos cuatro billones de años que tuvo lugar el año 2000.</p>
+      </div>
+
+
+  <div class="page-end fin-dark">
+    <div class="page-end-label">Final fatal</div>
+    <div class="page-end-text">El sol es una gigante roja. Estáis en el año 4.000.000.000 d.C. El fin de la Tierra.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag79.html">← Pág. 79</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag81.html">Pág. 81 →</a>
+  </footer>
+  </article>
+</body>
+</html>

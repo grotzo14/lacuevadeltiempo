@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 81</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">81</span>
+      <span class="page-era">Presente</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag81-img.jpg"
+       style="display:none">
+    <img src="pag81-img.jpg" alt="Ilustración página 81"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Lentamente recuperas el sentido. Estás en tu cama en el rancho Red Creek contemplando a tu tío Howard. A su lado está un médico amigo suyo.</p>
+<p class="dialog">— Tuviste una mala caída trepando por esas rocas del cañón — dice tu tío Howard —. El doctor Parsons dice que no entiende cómo no te has roto ningún hueso. Estábamos muy preocupados pensando que te habías perdido en una de esas cuevas.</p>
+<p>Te sientes un poco aturdido y muy débil, así que te limitas a sonreír sin decir nada. De todos modos, seguro que nadie te creería. No obstante, años después escribes un libro acerca de tus aventuras en la Cueva del Tiempo.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Despiertas en tu cama del rancho. Un sueño... o quizá no. Años después escribes el libro.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag80.html">← Pág. 80</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag82.html">Pág. 82 →</a>
+  </footer>
+  </article>
+</body>
+</html>

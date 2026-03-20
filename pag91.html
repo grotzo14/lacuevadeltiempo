@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 91</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">91</span>
+      <span class="page-era">Era de reptiles</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag91-img.jpg"
+       style="display:none">
+    <img src="pag91-img.jpg" alt="Ilustración página 91"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Pensando que siempre estarás a tiempo de volver a la cueva, decides explorar el mundo que te rodea.</p>
+<p>Caminas a lo largo del saliente rocoso que domina las praderas y los lagos, fijándote en lo que te rodea para poder volver a la cueva.</p>
+<p>A estas alturas empiezas a estar hambriento. Sabes que te encuentras en la época de los reptiles, hace por lo menos 100 millones de años, y que los mamíferos todavía no han hecho su aparición sobre la tierra. No podrás cazar un ciervo o un conejo, pero puede que encuentres algún pez en los lagos. Te preguntas a qué sabrán los huevos de dinosaurio.</p>
+<p>Sigues una amplia senda que cruza a través de los helechos gigantes. Al doblar el primer recodo, te encuentras frente a frente con el horrible Triceratops, un enorme monstruo grisáceo casi oculto por sus cuernos y su escudo. Te observa con curiosidad desde sus apagados ojos pardos. Te das la vuelta corriendo, chocando contra el tronco de un árbol que antes no estaba allí.</p>
+<p>La corteza tiene el tacto de la piel. Cuando miras hacia arriba para hacerte una idea de su tamaño, te encuentras con las fauces del Tyrannosaurus Rex.</p>
+      </div>
+
+
+  <div class="page-end fin-dark">
+    <div class="page-end-label">Final fatal</div>
+    <div class="page-end-text">El Tyrannosaurus Rex pone fin a tu aventura en la era de los reptiles.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag90.html">← Pág. 90</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag92.html">Pág. 92 →</a>
+  </footer>
+  </article>
+</body>
+</html>

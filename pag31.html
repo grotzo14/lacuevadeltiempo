@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 31</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">31</span>
+      <span class="page-era">Fin del universo</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag31-img.jpg"
+       style="display:none">
+    <img src="pag31-img.jpg" alt="Ilustración página 31"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Entras en el primer túnel y sigues andando hasta que empiezas a pensar que estás dando vueltas en círculo. ¿Tendrá esto algún significado? Quizá el tiempo esté transcurriendo con más lentitud. Estás al borde del agotamiento y empiezas a sentir mucho frío. Descubres una abertura en el techo, a través de la cual brillan las estrellas. Sales a un mundo desierto y desolado. El frío es intenso. Aunque no hace viento, vas a quedarte helado en pocos minutos. El aire casi no tiene consistencia como sucede en las cumbres de las montañas muy elevadas. Respiras con gran dificultad. Elevas la vista hasta el cielo frío y nocturno, cuajado de estrellas; entre ellas logras distinguir un disco del tamaño del sol que emite una pálida luz roja como la de un fuego en extinción.</p>
+      </div>
+
+
+  <div class="page-end fin-dark">
+    <div class="page-end-label">Final fatal</div>
+    <div class="page-end-text">Has llegado al fin del universo. El sol es ahora una enana roja. No hay retorno posible.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag30.html">← Pág. 30</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag32.html">Pág. 32 →</a>
+  </footer>
+  </article>
+</body>
+</html>

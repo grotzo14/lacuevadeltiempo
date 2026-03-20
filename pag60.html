@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 60</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">60</span>
+      <span class="page-era">Cueva del Tiempo</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag60-img.jpg"
+       style="display:none">
+    <img src="pag60-img.jpg" alt="Ilustración página 60"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>La sociedad perfecta del futuro es bastante aburrida, lo que te hace desear volver a tu época cuanto antes. Despidiéndote apresuradamente, vuelves corriendo al túnel, entras en él y tomas un ramal a la derecha con la esperanza de que te conduzca a tu época. Al poco tiempo, sales a la superficie terriblemente nervioso por saber qué es lo que te espera fuera.</p>
+<p>La oscuridad es absoluta y sopla un viento gélido. Tomas asiento resueltamente, decidido a esperar a que amanezca para ver en qué mundo estás. Mientras tanto, no encuentras el sistema de averiguar qué hora es, ni consultando tu reloj ni observando las estrellas.</p>
+<p>A tu alrededor oyes unos fuertes chasquidos. No logras descubrir su procedencia. Cuando la luz rosácea de la aurora empieza a iluminar el cielo por el este, te enfrentas con un extraño ser, cuyo tamaño es parecido al de una oveja pero con un aspecto totalmente diferente.</p>
+      </div>
+
+
+  <div class="page-end fin-amb">
+    <div class="page-end-label">Final</div>
+    <div class="page-end-text">Comienzo de una nueva vida en una época y lugar desconocidos.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag59.html">← Pág. 59</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag61.html">Pág. 61 →</a>
+  </footer>
+  </article>
+</body>
+</html>

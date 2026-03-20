@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 28</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">28</span>
+      <span class="page-era">Prehistoria</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag28-img.jpg"
+       style="display:none">
+    <img src="pag28-img.jpg" alt="Ilustración página 28"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>No ves ninguna posibilidad de futuro entre estas gentes primitivas, por lo que echas a correr de vuelta hacia la Cueva del Tiempo. Afortunadamente no te persiguen y logras rehacer el camino.</p>
+<p>Estás de nuevo en la cueva, agotado y hambriento. La luz es incluso más tenue que antes y te ves obligado a buscar a tientas el camino. Tropiezas y te caes de cabeza por un terraplén lastimándote ligeramente. Al levantar la vista, ves la luz del día. Poco después sales de la cueva a un terreno cálido y húmedo cercano a un bosque de frondosos árboles. Pasa volando un pájaro. No sabes en qué época estás, pero el paisaje parece bastante agradable.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag51.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Continúas andando</span>
+        <span class="option-page">pág. 51</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag27.html">← Pág. 27</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag29.html">Pág. 29 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 68</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">68</span>
+      <span class="page-era">Titanic — 1912</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag68-img.jpg"
+       style="display:none">
+    <img src="pag68-img.jpg" alt="Ilustración página 68"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>¿Podrás cambiar la historia y salvar cientos de vidas advirtiendo al capitán que el magnífico Titanic está destinado a hundirse en el fondo del Atlántico? Descubres unas escaleras que suben a la cubierta superior y trepas por ellas a toda velocidad.</p>
+<p>Arriba está parado un camarero.</p>
+<p class="dialog">— ¡No está permitido subir aquí! — dice.</p>
+<p>Lo esquivas y corres hacia la parte delantera del barco. Subes otras escaleras, yendo a parar al lado de estribor del puente. Allí encuentras al capitán que observa con sus prismáticos un barco que se divisa en el horizonte.</p>
+<p class="dialog">— ¡Capitán! — gritas —. Puede que usted no lo sepa, pero este barco va a hundirse en un par de horas.</p>
+<p>El capitán se vuelve hacia ti y te mira con gravedad.</p>
+<p class="dialog">— Lo sé — dice en voz baja —, pero vamos a lanzar unos cohetes de socorro y ese barco, el Californian, nos prestará ayuda.</p>
+<p class="dialog">— ¡No lo hará, capitán! — dices —. No creerán que el Titanic esté en peligro a pesar de los cohetes. La única esperanza es mandar una lancha con los hombres más fuertes que remen rápidamente hacia el Californian, mientras se lanzan cohetes a medida que se acercan.</p>
+<p class="dialog">— Desde luego, es una idea audaz — responde el capitán —, pero necesito a todos mis hombres para bajar las lanchas salvavidas y mantener el orden entre los pasajeros. No puedo creer que el Californian no acuda en nuestra ayuda cuando vea los cohetes.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">El capitán acepta mandar una lancha. Bajas a un bote salvavidas con 1.500 personas y tus esperanzas.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag67.html">← Pág. 67</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag69.html">Pág. 69 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 71</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">71</span>
+      <span class="page-era">Presente</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag71-img.jpg"
+       style="display:none">
+    <img src="pag71-img.jpg" alt="Ilustración página 71"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Te despierta una suave brisa que sopla en tu dirección. Ligeramente aturdido te pones en pie, coges el huevo y corres hacia el aire fresco, saliendo al exterior. ¡Estás de nuevo en el Cañón de la Serpiente! Todo está como tú lo recordabas y, pocas horas después, entras en el rancho Red Creek donde tu tío se sorprende de que estés de vuelta tan pronto.</p>
+<p>Nadie te cree cuando cuentas lo que ha sucedido; sin embargo, enmudecen de asombro ante el enorme huevo.</p>
+<p class="dialog">— Quizá lleguemos a creer tu historia si este huevo incuba un monstruo — dice tu tío —. Pero mejor será que lo rompas para ver lo que tienes dentro.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag72.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Decides abrir el huevo</span>
+        <span class="option-page">pág. 72</span>
+      </a>
+      <a class="option" href="pag103.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Lo guardas en tu armario con la intención de consultar con un científico</span>
+        <span class="option-page">pág. 103</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag70.html">← Pág. 70</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag72.html">Pág. 72 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 74</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">74</span>
+      <span class="page-era">Lago Ness — Edad Media</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag74-img.jpg"
+       style="display:none">
+    <img src="pag74-img.jpg" alt="Ilustración página 74"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Parece absurdo pensar que el monstruo del lago Ness se esconda durante cien años en la Cueva del Tiempo. Además, aunque así fuese, probablemente no lograrías bucear a la suficiente profundidad para encontrar la entrada. Por lo tanto, te resignas a vivir de la pesca en el lago.</p>
+<p>Tu nueva vida es soportable, pero no muy interesante. Lo que más te gusta es remar en tu bote durante las mañanas de niebla contemplando el pálido sol rojizo que pugna por brillar a través de la bruma. Una mañana, mientras estás pescando notas un terrible golpe debajo del bote. La popa se inclina hacia arriba y tú sales disparado por la proa yendo a caer en las fauces del monstruo.</p>
+<p>Ese mismo día, tus amigos encuentran los restos del naufragio. Por todo el pueblo la gente comenta que el monstruo ha vuelto.</p>
+      </div>
+
+
+  <div class="page-end fin-dark">
+    <div class="page-end-label">Final fatal</div>
+    <div class="page-end-text">El monstruo del lago Ness te devora. El pueblo comenta que el dragón ha vuelto.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag73.html">← Pág. 73</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag75.html">Pág. 75 →</a>
+  </footer>
+  </article>
+</body>
+</html>

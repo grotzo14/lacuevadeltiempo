@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 50</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">50</span>
+      <span class="page-era">Prehistoria</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag50-img.jpg"
+       style="display:none">
+    <img src="pag50-img.jpg" alt="Ilustración página 50"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Asiendo el largo cuchillo de marfil, avanzas lentamente, paso a paso, hacia el lobo que espera gruñendo aparentemente sorprendido por tu audacia.</p>
+<p>Con un gran salto el animal se lanza sobre ti. Le atacas con el cuchillo, desviando el cuerpo para evitar sus temibles colmillos. Tus cuchilladas dan en el aire, pero el lobo tampoco consigue otra cosa que desgarrar tu abrigo de piel de oso. Se detiene un instante para olerlo y aprovechas para clavar tu cuchillo en su cuello. El lobo gira, te mira con odio y se desploma sobre el suelo con la columna vertebral partida.</p>
+<p>Ahora ya eres un auténtico cazador de la Edad de Piedra. Despojas al animal de su piel y entras en la cueva.</p>
+<p>Sigues el túnel de la derecha pensando que puede devolverte a tu época cuando, de repente, caes hundiéndote más y más deprisa en un pozo que no parece tener fin.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag81.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Caes al fondo del pozo</span>
+        <span class="option-page">pág. 81</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag49.html">← Pág. 49</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag51.html">Pág. 51 →</a>
+  </footer>
+  </article>
+</body>
+</html>

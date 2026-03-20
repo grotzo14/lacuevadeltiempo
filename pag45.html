@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 45</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">45</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag45-img.jpg"
+       style="display:none">
+    <img src="pag45-img.jpg" alt="Ilustración página 45"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p class="dialog">— Soy un filósofo —responde el anciano—, y decidí escoger la eternidad para tener todo el tiempo del mundo para meditar.</p>
+<p class="dialog">— ¿Y estás contento con tu decisión? —preguntas.</p>
+<p class="dialog">— No, porque la filosofía sin el tiempo no es nada. Toma el túnel de la derecha y vuelve a tu época. Haz de tu vida tu propia filosofía.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Vuelves a tu época con un consejo del filósofo eterno: haz de tu vida tu propia filosofía.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag44.html">← Pág. 44</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag46.html">Pág. 46 →</a>
+  </footer>
+  </article>
+</body>
+</html>

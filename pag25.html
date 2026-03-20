@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 25</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">25</span>
+      <span class="page-era">Futuro lejano</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag25-img.jpg"
+       style="display:none">
+    <img src="pag25-img.jpg" alt="Ilustración página 25"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Recorres bastante distancia por el pasaje de la derecha con la esperanza de encontrar un túnel que conduzca a tu época. Escoges uno de los muchos pasadizos que cruzan y lo sigues. En lugar de subir hasta la superficie, entras en una estancia brillantemente iluminada en el centro de la cual está sentado un anciano con barba.</p>
+<p class="dialog">— ¡Bienvenido! —dice, como si estuviera esperándote.</p>
+<p class="dialog">— Gracias —respondes—. ¿Puedes ayudarme a regresar a mi época?</p>
+<p class="dialog">— Ante todo, dime por qué quieres volver a tu tiempo, ¿No te gustaría ir a otro cualquiera? —dice el anciano sonriendo.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag43.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Le dices que deseas volver a tu época para estar con tu familia y tus amigos</span>
+        <span class="option-page">pág. 43</span>
+      </a>
+      <a class="option" href="pag41.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Dices que no quieres correr el riesgo de ir a parar a una mala época</span>
+        <span class="option-page">pág. 41</span>
+      </a>
+      <a class="option" href="pag44.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Le dices que te gustaría conocer otra época, pero sólo si te garantiza que podrás volver a la tuya</span>
+        <span class="option-page">pág. 44</span>
+      </a>
+      <a class="option" href="pag45.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Le preguntas quién es</span>
+        <span class="option-page">pág. 45</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag24.html">← Pág. 24</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag26.html">Pág. 26 →</a>
+  </footer>
+  </article>
+</body>
+</html>
