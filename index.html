@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Elige Tu Propia Aventura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:      #c0180c;
+      --red-dark: #8b0f08;
+      --red-deep: #5a0905;
+      --gold:     #c9922a;
+      --gold-lt:  #e8b84b;
+      --cream:    #f5f0e8;
+      --parchment:#ede5d0;
+      --ink:      #1a1410;
+      --ink-soft: #3d2e22;
+      --fog:      rgba(26,20,16,0.55);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Crimson Text', Georgia, serif;
+      background: var(--ink);
+      color: var(--cream);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ──────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px 60px;
+      overflow: hidden;
+    }
+
+    /* Cave mouth SVG background */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-bg svg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+    }
+
+    /* Radial glow from cave mouth */
+    .cave-glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center,
+        rgba(201,146,42,0.18) 0%,
+        rgba(192,24,12,0.10) 40%,
+        transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -52%);
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.7; transform: translate(-50%,-52%) scale(1); }
+      50%       { opacity: 1;   transform: translate(-50%,-52%) scale(1.12); }
+    }
+
+    /* Floating dust particles */
+    .particles { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(201,146,42,0.5);
+      animation: float-up linear infinite;
+    }
+    @keyframes float-up {
+      0%   { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 0.6; }
+      100% { transform: translateY(-80vh) translateX(var(--drift, 20px)) scale(0.3); opacity: 0; }
+    }
+
+    /* ── HERO CONTENT ──────────────────────────────── */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      animation: fade-up 1.2s cubic-bezier(.16,1,.3,1) both;
+    }
+
+    @keyframes fade-up {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,146,42,0.4);
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 28px;
+      animation: fade-up 1.2s 0.1s both;
+    }
+
+    .series-name {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 10px;
+      animation: fade-up 1.2s 0.15s both;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 900;
+      font-size: clamp(42px, 8vw, 80px);
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+      text-shadow:
+        0 0 60px rgba(201,146,42,0.25),
+        0 2px 4px rgba(0,0,0,0.8);
+      margin-bottom: 6px;
+      animation: fade-up 1.2s 0.2s both;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--red);
+      text-shadow:
+        0 0 40px rgba(192,24,12,0.5),
+        0 2px 4px rgba(0,0,0,0.8);
+    }
+
+    .author {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.45);
+      margin-bottom: 40px;
+      animation: fade-up 1.2s 0.3s both;
+    }
+
+    /* Ornamental divider */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+      animation: fade-up 1.2s 0.35s both;
+    }
+    .ornament-line {
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201,146,42,0.5), transparent);
+    }
+    .ornament-diamond {
+      width: 6px; height: 6px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      opacity: 0.7;
+    }
+
+    .synopsis {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(245,240,232,0.78);
+      max-width: 520px;
+      margin: 0 auto 44px;
+      font-style: italic;
+      animation: fade-up 1.2s 0.4s both;
+    }
+
+    /* ── HOW TO PLAY ───────────────────────────────── */
+    .howto {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,146,42,0.2);
+      border-radius: 4px;
+      padding: 18px 24px;
+      margin-bottom: 44px;
+      text-align: left;
+      animation: fade-up 1.2s 0.45s both;
+    }
+
+    .howto-title {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+
+    .howto-steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .howto-steps li {
+      font-size: 14px;
+      color: rgba(245,240,232,0.65);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      line-height: 1.5;
+    }
+
+    .howto-steps li .step-num {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      color: var(--gold);
+      opacity: 0.6;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── CTA BUTTON ────────────────────────────────── */
+    .cta-wrap {
+      animation: fade-up 1.2s 0.5s both;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--red);
+      color: var(--cream);
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 48px;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      box-shadow:
+        0 4px 24px rgba(192,24,12,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 60%);
+    }
+
+    .cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow:
+        0 8px 32px rgba(192,24,12,0.55),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+
+    .cta:active { transform: translateY(0); }
+
+    .cta-arrow {
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+    .cta:hover .cta-arrow { transform: translateX(4px); }
+
+    .cta-sub {
+      margin-top: 14px;
+      font-size: 12px;
+      color: rgba(245,240,232,0.3);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── ERAS SECTION ──────────────────────────────── */
+    .eras-section {
+      position: relative;
+      z-index: 2;
+      background: rgba(26,20,16,0.95);
+      border-top: 1px solid rgba(201,146,42,0.15);
+      padding: 80px 24px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-label {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+
+    .eras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .era-card {
+      position: relative;
+      padding: 28px 24px;
+      background: rgba(245,240,232,0.03);
+      border: 1px solid rgba(245,240,232,0.07);
+      transition: background 0.2s, border-color 0.2s;
+      overflow: hidden;
+    }
+
+    .era-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--era-color, var(--gold));
+      opacity: 0.7;
+    }
+
+    .era-card:hover {
+      background: rgba(245,240,232,0.055);
+      border-color: rgba(245,240,232,0.13);
+    }
+
+    .era-icon {
+      font-size: 26px;
+      margin-bottom: 12px;
+      display: block;
+      filter: grayscale(0.2);
+    }
+
+    .era-name {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+
+    .era-desc {
+      font-size: 13.5px;
+      color: rgba(245,240,232,0.5);
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    .era-pages {
+      margin-top: 10px;
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--era-color, var(--gold));
+      opacity: 0.6;
+    }
+
+    /* ── STATS ROW ─────────────────────────────────── */
+    .stats-section {
+      border-top: 1px solid rgba(201,146,42,0.12);
+      border-bottom: 1px solid rgba(201,146,42,0.12);
+      padding: 40px 24px;
+      background: rgba(192,24,12,0.06);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .stat {
+      flex: 1;
+      min-width: 140px;
+      text-align: center;
+      padding: 20px 16px;
+      border-right: 1px solid rgba(245,240,232,0.07);
+    }
+
+    .stat:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+      text-shadow: 0 0 30px rgba(192,24,12,0.4);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.4);
+      font-family: 'Cinzel', serif;
+    }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--ink);
+    }
+
+    .footer-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: transparent;
+      color: var(--cream);
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 40px;
+      border: 1px solid rgba(192,24,12,0.6);
+      border-radius: 2px;
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .footer-cta:hover {
+      background: var(--red);
+      border-color: var(--red);
+      box-shadow: 0 4px 20px rgba(192,24,12,0.4);
+    }
+
+    .footer-note {
+      margin-top: 24px;
+      font-size: 12px;
+      color: rgba(245,240,232,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── RESPONSIVE ────────────────────────────────── */
+    @media (max-width: 500px) {
+      .eras-grid { grid-template-columns: 1fr; }
+      .stats-row { flex-direction: column; }
+      .stat { border-right: none; border-bottom: 1px solid rgba(245,240,232,0.07); }
+      .stat:last-child { border-bottom: none; }
+      .howto { padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero">
+
+  <div class="hero-bg">
+    <!-- Cave mouth silhouette -->
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="caveglow" cx="50%" cy="50%" r="40%">
+          <stop offset="0%"   stop-color="#c9922a" stop-opacity="0.12"/>
+          <stop offset="40%"  stop-color="#c0180c" stop-opacity="0.07"/>
+          <stop offset="100%" stop-color="#1a1410" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="innerlight" cx="50%" cy="52%" r="28%">
+          <stop offset="0%"   stop-color="#e8b84b" stop-opacity="0.18"/>
+          <stop offset="60%"  stop-color="#c9922a" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#1a1410" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="blur-sm"><feGaussianBlur stdDeviation="3"/></filter>
+        <filter id="blur-lg"><feGaussianBlur stdDeviation="18"/></filter>
+      </defs>
+
+      <!-- Deep background -->
+      <rect width="1200" height="800" fill="#0e0b08"/>
+
+      <!-- Subtle starfield -->
+      <g opacity="0.25">
+        <circle cx="120" cy="60" r="1" fill="#e8b84b"/>
+        <circle cx="340" cy="90" r="0.7" fill="#fff"/>
+        <circle cx="890" cy="45" r="1.2" fill="#fff"/>
+        <circle cx="1050" cy="120" r="0.8" fill="#e8b84b"/>
+        <circle cx="200" cy="180" r="0.6" fill="#fff"/>
+        <circle cx="980" cy="200" r="0.7" fill="#fff"/>
+        <circle cx="60" cy="300" r="1" fill="#e8b84b"/>
+        <circle cx="1140" cy="350" r="0.9" fill="#fff"/>
+        <circle cx="150" cy="500" r="0.7" fill="#fff"/>
+        <circle cx="1080" cy="600" r="1.1" fill="#e8b84b"/>
+      </g>
+
+      <!-- Cave interior glow -->
+      <ellipse cx="600" cy="400" rx="280" ry="240" fill="url(#caveglow)" filter="url(#blur-lg)"/>
+      <ellipse cx="600" cy="410" rx="160" ry="130" fill="url(#innerlight)" filter="url(#blur-sm)"/>
+
+      <!-- Cave mouth shape — large organic opening -->
+      <path d="
+        M0,800
+        L0,480
+        C60,450 80,380 110,320
+        C130,280 120,230 160,200
+        C200,170 230,140 280,130
+        C310,124 340,150 370,160
+        C400,170 410,140 430,120
+        C455,98 470,75 500,65
+        C520,58 540,62 560,58
+        C575,55 585,45 600,42
+        C615,45 625,55 640,58
+        C660,62 680,58 700,65
+        C730,75 745,98 770,120
+        C790,140 800,170 830,160
+        C860,150 890,124 920,130
+        C970,140 1000,170 1040,200
+        C1080,230 1070,280 1090,320
+        C1120,380 1140,450 1200,480
+        L1200,800
+        Z
+      " fill="#0e0b08"/>
+
+      <!-- Rocky cave walls — left -->
+      <path d="M0,800 L0,460 C30,430 50,390 90,350 C120,320 140,290 170,270 C200,250 220,240 240,250 C260,260 255,300 250,330 C245,360 260,380 280,370 C300,360 310,330 330,320 C350,310 360,320 370,340 C380,360 370,390 360,420 C350,450 340,480 350,510 L350,800 Z" fill="#120e0a" opacity="0.9"/>
+
+      <!-- Rocky cave walls — right -->
+      <path d="M1200,800 L1200,460 C1170,430 1150,390 1110,350 C1080,320 1060,290 1030,270 C1000,250 980,240 960,250 C940,260 945,300 950,330 C955,360 940,380 920,370 C900,360 890,330 870,320 C850,310 840,320 830,340 C820,360 830,390 840,420 C850,450 860,480 850,510 L850,800 Z" fill="#120e0a" opacity="0.9"/>
+
+      <!-- Cave ceiling stalactites suggestion -->
+      <path d="M320,130 C310,145 315,165 308,180 C302,195 290,200 295,215 L310,215 C315,202 325,196 330,183 C336,168 332,148 340,132 Z" fill="#0d0a07"/>
+      <path d="M520,58 C514,72 518,88 512,102 C506,115 496,118 500,130 L514,130 C518,119 526,115 530,103 C535,90 531,74 538,60 Z" fill="#0d0a07"/>
+      <path d="M700,65 C694,80 698,96 693,110 C688,123 678,126 682,138 L695,138 C699,127 706,123 710,111 C715,98 711,82 718,66 Z" fill="#0d0a07"/>
+
+      <!-- Faint inner cave details -->
+      <path d="M430,500 C450,460 480,420 510,400 C530,388 555,385 580,384 C605,385 625,390 645,402 C675,420 700,460 720,500" stroke="rgba(201,146,42,0.06)" stroke-width="1" fill="none"/>
+      <path d="M460,580 C480,540 505,505 530,488 C550,474 570,470 600,470 C630,470 650,474 672,490 C698,508 722,544 740,580" stroke="rgba(201,146,42,0.04)" stroke-width="1" fill="none"/>
+    </svg>
+
+    <div class="cave-glow"></div>
+  </div>
+
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="badge">Elige tu propia aventura · N.º 1</div>
+    <p class="series-name">Edward Packard · Paul Granger</p>
+    <h1>La Cueva<span>del Tiempo</span></h1>
+    <p class="author">Una aventura para valientes</p>
+
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line"></div>
+    </div>
+
+    <p class="synopsis">
+      Tú eres el protagonista. Entras en una cueva misteriosa y el tiempo se quiebra. Cada decisión te arrastra a una época distinta: la Edad Media, la prehistoria, el Titanic, el lejano futuro. Elige bien — o elige mal. Hay cuarenta destinos posibles.
+    </p>
+
+    <div class="howto">
+      <div class="howto-title">¿Cómo se juega?</div>
+      <ul class="howto-steps">
+        <li><span class="step-num">I.</span> Lee la página. Tómate tu tiempo.</li>
+        <li><span class="step-num">II.</span> Al llegar a las opciones, elige un camino.</li>
+        <li><span class="step-num">III.</span> El clic te lleva a la siguiente página. Sin vuelta atrás.</li>
+        <li><span class="step-num">IV.</span> Si llegas a un Final, puedes volver al inicio y probar otra ruta.</li>
+      </ul>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="pag01.html" class="cta">
+        Comenzar la aventura
+        <span class="cta-arrow">→</span>
+      </a>
+      <p class="cta-sub">40 finales distintos te esperan</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ──────────────────────────────────────────── -->
+<div class="stats-section">
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-num">115</span>
+      <span class="stat-label">Páginas</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">40</span>
+      <span class="stat-label">Finales posibles</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Épocas temporales</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">∞</span>
+      <span class="stat-label">Caminos a explorar</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── ERAS ───────────────────────────────────────────── -->
+<section class="eras-section">
+  <div class="section-header">
+    <p class="section-label">Los mundos que te esperan</p>
+    <h2 class="section-title">Seis épocas. Cuarenta destinos.</h2>
+  </div>
+
+  <div class="eras-grid">
+
+    <div class="era-card" style="--era-color: #9b7fd4;">
+      <span class="era-icon">⚔️</span>
+      <div class="era-name">Edad Media — año 982</div>
+      <div class="era-desc">Castillos, reyes caprichosos y el misterioso lago Ness. ¿Vasallo, fugitivo o caballero?</div>
+      <div class="era-pages">Págs. 6 · 11–15 · 22 · 36–37 · 66–78</div>
+    </div>
+
+    <div class="era-card" style="--era-color: #5dca97;">
+      <span class="era-icon">🦣</span>
+      <div class="era-name">Prehistoria y Edad del Hielo</div>
+      <div class="era-desc">Mamuts lanudos, cazadores con lanzas y pinturas rupestres. La supervivencia, desnuda.</div>
+      <div class="era-pages">Págs. 8 · 17–18 · 26–30 · 46–53</div>
+    </div>
+
+    <div class="era-card" style="--era-color: #5ba8e0;">
+      <span class="era-icon">🚀</span>
+      <div class="era-name">Futuro lejano — año 3742</div>
+      <div class="era-desc">Naves espaciales, sociedades perfectas y el fin del universo. El tiempo tiene fin.</div>
+      <div class="era-pages">Págs. 20 · 24–25 · 40–45 · 56–57 · 92–93</div>
+    </div>
+
+    <div class="era-card" style="--era-color: #e8a94b;">
+      <span class="era-icon">🚂</span>
+      <div class="era-name">Siglo XIX — Lincoln y el Oeste</div>
+      <div class="era-desc">Trenes de vapor, Abraham Lincoln y las praderas americanas. La historia, a tu alcance.</div>
+      <div class="era-pages">Págs. 54–55 · 94–100</div>
+    </div>
+
+    <div class="era-card" style="--era-color: #e07a5f;">
+      <span class="era-icon">⚓</span>
+      <div class="era-name">1912 — El Titanic</div>
+      <div class="era-desc">El barco que nunca debería haberse hundido. ¿Podrás cambiar la historia?</div>
+      <div class="era-pages">Págs. 33–34 · 68–69 · 79 · 86</div>
+    </div>
+
+    <div class="era-card" style="--era-color: #81b29a;">
+      <span class="era-icon">🖨️</span>
+      <div class="era-name">Siglo XVIII — América colonial</div>
+      <div class="era-desc">Boston 1718, imprentas, cuáqueros y juicios por brujería. Una vida entera por construir.</div>
+      <div class="era-pages">Págs. 61 · 104–113</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER CTA ─────────────────────────────────────── -->
+<footer class="footer">
+  <a href="pag01.html" class="footer-cta">
+    Entrar en la cueva
+    <span>→</span>
+  </a>
+  <p class="footer-note">La Cueva del Tiempo · Edward Packard · Timun Mas, 1983</p>
+</footer>
+
+<script>
+  // Generate floating dust particles
+  const container = document.getElementById('particles');
+  const count = 18;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 3 + 1;
+    const left = Math.random() * 100;
+    const delay = Math.random() * 12;
+    const duration = Math.random() * 10 + 8;
+    const drift = (Math.random() - 0.5) * 80;
+    p.style.cssText = `
+      width: ${size}px;
+      height: ${size}px;
+      left: ${left}%;
+      bottom: ${Math.random() * 30}%;
+      --drift: ${drift}px;
+      animation-duration: ${duration}s;
+      animation-delay: -${delay}s;
+      opacity: 0;
+    `;
+    container.appendChild(p);
+  }
+
+  // Scroll reveal for eras and stats
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = `fade-up 0.7s ${i * 0.08}s cubic-bezier(.16,1,.3,1) both`;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.era-card, .stat').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
