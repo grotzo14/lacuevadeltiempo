@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 112</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">112</span>
+      <span class="page-era">S. XVIII — Boston colonial</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag112-img.jpg"
+       style="display:none">
+    <img src="pag112-img.jpg" alt="Ilustración página 112"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Cuando terminas tu historia, dice:</p>
+<p class="dialog">— Es extraño que nos hayamos encontrado. Padezco de tuberculosis y ningún médico de Boston puede curarme. Mi única esperanza es encontrar la forma de llegar al futuro.</p>
+<p class="dialog">— Creo que a mí me sucede lo mismo — respondes.</p>
+<p class="dialog">— Si nos ayudamos mutuamente, puede que logremos volver a tu época, que también será la mía.</p>
+<p>Selláis el trato con un apretón de manos y, a la mañana siguiente, emprendéis la búsqueda a la salida del sol.</p>
+<p>Juntos lográis volver al tiempo presente. Tu amigo se cura con ayuda de los medicamentos modernos y se convierte en profesor de historia, famoso en todo el país por sus asombrosos conocimientos sobre la América colonial.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Volvéis juntos al presente. Tu amigo se cura y se hace famoso profesor de historia colonial.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag111.html">← Pág. 111</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag113.html">Pág. 113 →</a>
+  </footer>
+  </article>
+</body>
+</html>

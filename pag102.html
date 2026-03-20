@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 102</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">102</span>
+      <span class="page-era">Presente</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag102-img.jpg"
+       style="display:none">
+    <img src="pag102-img.jpg" alt="Ilustración página 102"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Te sientas, con la cabeza apoyada en las manos, incapaz de creer lo que te depara el destino. Vivir para siempre en un mundo sin tiempo te parece peor que la muerte.</p>
+<p class="dialog">— Bueno, a decir verdad, sí hay un modo de salir de la cueva — dice finalmente la mujer —, pero si lo haces ya no podrás vivir eternamente.</p>
+<p class="dialog">— No me importa — dices —. Enséñame el camino.</p>
+<p class="dialog">— Muy bien — responde, moviendo la cabeza con aire de incredulidad —. Tienes que sumergirte debajo del saliente rocoso sobre el que estoy sentada y bucear por el túnel que hay debajo. De este modo llegarás a tu época. No tengas miedo; son sólo unos metros y podrás hacerlo con facilidad.</p>
+<p>Miras por última vez a tu alrededor, le dices adiós y te sumerges. Al cabo de unos instantes, sales a la superficie de un estanque situado a poca distancia de la entrada de la Cueva del Tiempo. Nadas hasta la orilla y corres afuera, estando a punto de chocar con tu tío Howard que ha venido a buscarte.</p>
+<p class="dialog">— Llegas tarde a la cena — dice —. Teníamos que te hubiese sucedido algo. Deberías tener mejor sentido del tiempo.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Vuelves a casa. Tu tío te dice: 'Deberías tener mejor sentido del tiempo'.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag101.html">← Pág. 101</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag103.html">Pág. 103 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 14</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">14</span>
+      <span class="page-era">Edad Media ~982</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag14-img.jpg"
+       style="display:none">
+    <img src="pag14-img.jpg" alt="Ilustración página 14"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>En un instante, has cruzado el puente y te encuentras galopando por el campo sintiéndote más listo que el rey o sus caballeros. Agitas la mano hacia unos pastores al pasar por su lado y ellos te devuelven el saludo.</p>
+<p>Haces un descanso en la casa de un cabrero muy amable que te obsequia con un magnífico almuerzo.</p>
+<p class="dialog">— No debes temer al rey —dice—. Es un tonto que se pasa el día sentado bebiendo vino. Su única preocupación consiste en saber a quién debe encerrar en la torre. Hasta sus mismos caballeros se ríen de él y es mucho más probable que se caiga de su trono que tú de tu caballo. ¡Dirígete a la feliz Inglaterra, ya que allí te aguardan grandes acontecimientos! ¡Buen viaje y felices aventuras!</p>
+<p>Tus energías se han repuesto gracias a la buena comida y tu caballo también está dispuesto para partir. Das las gracias efusivamente a tu anfitrión y te dispones a cabalgar hacia nuevas aventuras y una nueva vida, casi un millar de años antes de haber nacido.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Nueva vida en el año 982 como aventurero en la feliz Inglaterra.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag13.html">← Pág. 13</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag15.html">Pág. 15 →</a>
+  </footer>
+  </article>
+</body>
+</html>

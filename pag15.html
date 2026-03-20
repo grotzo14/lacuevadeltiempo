@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 15</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">15</span>
+      <span class="page-era">Edad Media ~982</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag15-img.jpg"
+       style="display:none">
+    <img src="pag15-img.jpg" alt="Ilustración página 15"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Logras acceder al rey y le das las gracias por dejarte salir de la torre.</p>
+<p class="dialog">— No tiene importancia —responde—. Haríamos lo mismo por cualquier bribón. Nos has caído bien y tu historia, aunque no tiene ningún sentido, nos ha hecho reír. Seguramente sin saberlo has prestado un servicio a tu rey. Gracias.</p>
+<p class="dialog">— Haré que te den un caballo y algunas piezas de oro —continúa diciendo—. Vete y haz fortuna. Pero te ordeno que vuelvas cada año a contarnos una aventura tan divertida, por lo menos, como la que ya hemos oído de tus labios.</p>
+<p class="dialog">— Mi señor —dices.</p>
+<p class="dialog">— Mi vasallo —responde el rey.</p>
+<p>Te alejas a caballo, con cierta inquietud, pero decidido a sacar el mayor partido posible de tu vida en el año 982.</p>
+      </div>
+
+
+  <div class="page-end fin-ok">
+    <div class="page-end-label">Final feliz</div>
+    <div class="page-end-text">Vives en el año 982 como vasallo del rey. Una vida extraña pero llena de posibilidades.</div>
+  </div>
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag14.html">← Pág. 14</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag16.html">Pág. 16 →</a>
+  </footer>
+  </article>
+</body>
+</html>

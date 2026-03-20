@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 1</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">1</span>
+      
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag01-img.jpg"
+       style="display:none">
+    <img src="pag01-img.jpg" alt="Ilustración página 1"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p><strong>Advertencia</strong></p>
+<p>¡No leas todo el libro seguido, del principio al fin! En sus páginas hallarás muchas y variadas aventuras. A medida que lo vayas leyendo, te verás obligado a elegir. De tu decisión depende que la aventura constituya un éxito o un fracaso.</p>
+<p>Tú serás el responsable del resultado final. Te corresponde a ti tomar las decisiones. Una vez que hayas elegido, sigue las instrucciones para averiguar qué sucede a continuación.</p>
+<p>Recuerda que no puedes volverte atrás. Recapacita antes de decidirte por una opción. Tu elección puede conducirte al desastre o... ¡a un magnífico final!</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag02.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Comenzar la aventura</span>
+        <span class="option-page">pág. 2</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <span></span>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag02.html">Pág. 2 →</a>
+  </footer>
+  </article>
+</body>
+</html>

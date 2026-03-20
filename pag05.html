@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 5</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">5</span>
+      
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag05-img.jpg"
+       style="display:none">
+    <img src="pag05-img.jpg" alt="Ilustración página 5"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Esperas hasta la mañana siguiente, pero a medida que los rosados jirones del amanecer iluminan el cielo por el este, empieza a soplar un viento helado y amenazador.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag06.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Buscas refugio</span>
+        <span class="option-page">pág. 6</span>
+      </a>
+      <a class="option" href="pag16.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Decides soportar el viento para ver lo que hay a tu alrededor</span>
+        <span class="option-page">pág. 16</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag04.html">← Pág. 4</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag06.html">Pág. 6 →</a>
+  </footer>
+  </article>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 12</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card even">
+
+    <header class="page-header">
+      <span class="page-number">12</span>
+      <span class="page-era">Edad Media ~982</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag12-img.jpg"
+       style="display:none">
+    <img src="pag12-img.jpg" alt="Ilustración página 12"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Saltas lo más lejos posible, cayendo cada vez más deprisa, hasta zambullirte en el agua llegando hasta el fondo donde el blando fango amortigua tu caída. Al cabo de unos segundos sales a la superficie. Nadas hasta la orilla exterior del foso, ligeramente aturdido pero sin daño alguno, te encaramas hasta el borde y corres a esconderte en el bosque.</p>
+<p>Caminas entre los árboles hasta que pierdes de vista el castillo y, entonces, sales a campo abierto. Encuentras a un campesino y le preguntas dónde puedes pasar la noche.</p>
+<p class="dialog">— Sube a esa colina y verás el lago Ness —dice—. Allí podrás encontrar algún lugar para guarecerte.</p>
+<p>Sigues sus indicaciones y te diriges hacia un grupo de casas situadas cerca del lago. Empieza a oscurecer y te alegras de encontrar a un pescador que te ofrece cobijo para la noche. Tanto él como su mujer son muy amables contigo; te invitan a quedarte con ellos y ayudarles en la pesca para ganar tu sustento.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag66.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Aceptas quedarte con el pescador</span>
+        <span class="option-page">pág. 66</span>
+      </a>
+      <a class="option" href="pag78.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Decides seguir viajando</span>
+        <span class="option-page">pág. 78</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag11.html">← Pág. 11</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag13.html">Pág. 13 →</a>
+  </footer>
+  </article>
+</body>
+</html>

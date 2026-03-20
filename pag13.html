@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 13</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">13</span>
+      <span class="page-era">Edad Media ~982</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag13-img.jpg"
+       style="display:none">
+    <img src="pag13-img.jpg" alt="Ilustración página 13"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p>Decides esperar, pero pronto lamentas haberlo hecho. Un guardián viene dos veces al día a traerte la comida, que consiste únicamente en pan moreno y agua. Al cabo de unos días te sientes demasiado débil, incluso para escapar si surgiera la oportunidad.</p>
+<p>Cuando estás a punto de perder las esperanzas de volver a recobrar tu libertad, el guardián entra sonriendo en tu celda.</p>
+<p class="dialog">—El rey ordena que te vayas —dice—. Tenemos un prisionero mucho más importante. ¡Uno que ha insultado al caballo de su majestad!</p>
+<p>Irrumpe a carcajadas. No sabes si dice la verdad, pero mantiene la puerta abierta señalando hacia afuera. De nuevo en libertad, bajas la larga escalera de piedra hasta el patio principal. El puente levadizo está bajado y no parece haber ningún impedimento para que abandones el castillo.</p>
+<p>Cerca de ti está atado un espléndido alazán que probablemente pertenece a uno de los caballeros del rey. Se te ocurre que podrías recorrer una larga distancia con él antes de que nadie lo eche en falta.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag14.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Montas en el caballo y sales a galope</span>
+        <span class="option-page">pág. 14</span>
+      </a>
+      <a class="option" href="pag15.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Pides refugio al rey</span>
+        <span class="option-page">pág. 15</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag12.html">← Pág. 12</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag14.html">Pág. 14 →</a>
+  </footer>
+  </article>
+</body>
+</html>

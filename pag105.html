@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Cueva del Tiempo — Página 105</title>
+  <link rel="stylesheet" href="book.css">
+</head>
+<body>
+  <article class="page-card odd">
+
+    <header class="page-header">
+      <span class="page-number">105</span>
+      <span class="page-era">S. XVIII — Boston colonial</span>
+    </header>
+
+  <div class="page-image placeholder" id="img-block"
+       data-src="pag105-img.jpg"
+       style="display:none">
+    <img src="pag105-img.jpg" alt="Ilustración página 105"
+         onerror="this.parentElement.style.display='none'"
+         onload="this.parentElement.classList.remove('placeholder'); this.parentElement.style.display='flex'">
+  </div>
+  <script>
+    (function(){
+      var b = document.getElementById('img-block');
+      var i = b.querySelector('img');
+      var t = new Image();
+      t.onload = function(){ b.style.display='flex'; b.classList.remove('placeholder'); };
+      t.onerror = function(){ b.style.display='none'; };
+      t.src = i.src;
+    })();
+  </script>
+    <div class="page-body">
+      <div class="page-text">
+<p class="dialog">— Seguramente podrás quedarte en mi casa. Somos tantos que uno más no importa, pero tendrás que trabajar en la tienda como todos nosotros.</p>
+<p>Como prácticamente no tienes otra posibilidad, aceptas su oferta agradecido por la comida y la cama que te ofrecen sus padres. Muy seriamente, Nick te informa que estás en el año 1718 en Boston, la ciudad más importante de la colonia inglesa de Massachussetts.</p>
+<p>Pronto formas parte de la familia. Son buena gente y te tratan bien, pero tienes que trabajar muchas horas al día cociendo jabón y vertiéndolo en los moldes, atendiendo a los clientes o haciendo recados para el padre de Nick, a quien llamas tío Ted.</p>
+<p>Uno de los vecinos, el señor Nelson, es impresor. Acaba de volver de Inglaterra donde ha comprado una imprenta. El negocio te interesa y piensas en trabajar con él como aprendiz, pero si lo haces tendrás que firmar un contrato que te obliga a trabajar lealmente para él durante seis años.</p>
+      </div>
+
+  <div class="page-options">
+    <div class="page-options-title">Elige tu camino</div>
+      <a class="option" href="pag107.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Decides quedarte en casa y seguir trabajando con el tío Ted</span>
+        <span class="option-page">pág. 107</span>
+      </a>
+      <a class="option" href="pag109.html">
+        <span class="option-arrow">→</span>
+        <span class="option-text">Decides contratarte como aprendiz en la imprenta del señor Nelson</span>
+        <span class="option-page">pág. 109</span>
+      </a>
+  </div>
+
+    </div>
+
+  <footer class="page-nav">
+    <a class="nav-btn" href="pag104.html">← Pág. 104</a>
+    <a class="nav-btn home" href="pag01.html">Inicio</a>
+    <a class="nav-btn" href="pag106.html">Pág. 106 →</a>
+  </footer>
+  </article>
+</body>
+</html>
